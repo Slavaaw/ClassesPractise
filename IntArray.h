@@ -7,9 +7,22 @@ public:
     IntArray(const IntArray& rhs);
 
     const int size() { return _size; }
-    ~IntArray() { delete[] ia; }
+    
+    bool operator == (const IntArray&) const;
+    bool operator != (const IntArray&) const;
 
-private:
+    IntArray& operator = (const IntArray&);
+    int size() const { return _size; };
+
+    virtual int& operator[] (int index) { return ia[index; ] }
+    virtual void sort();
+
+    virtual int min();
+    virtual int max();
+    virtual int find();
+    virtual ~IntArray() { delete[] ia; }
+
+protected:
     void init(int sz, int* array);
     int _size;
     int* ia;

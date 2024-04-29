@@ -1,9 +1,5 @@
 ﻿#include <iostream>
-
-class IntArray1 {
-
-};
-
+#include "IntArray.h"
 
 
 int main()
