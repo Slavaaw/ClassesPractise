@@ -14,12 +14,12 @@ public:
     IntArray& operator = (const IntArray&);
     int size() const { return _size; };
 
-    virtual int& operator[] (int index) { return ia[index; ] }
+    virtual int& operator[] (int index) { return ia[index]; }
     virtual void sort();
 
-    virtual int min();
-    virtual int max();
-    virtual int find();
+    virtual int min() const;
+    virtual int max() const;
+    virtual int find(int value) const;
     virtual ~IntArray() { delete[] ia; }
 
 protected:
